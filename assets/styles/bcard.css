@@ -1,0 +1,188 @@
+.bcard {
+  position: relative;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  max-width: 630px;
+  height: 375px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  margin: 0 auto;
+  /* -webkit-transform: translate(-50%, -50%); */
+  /* transform: translate(-50%, -50%); */
+}
+
+.bcard a {
+  color: #ffe347;
+  text-decoration: none;
+}
+
+.bcard a:hover {
+  text-decoration: underline;
+}
+
+/* Hidden checkbox input */
+.bcard-input {
+  display: none;
+}
+
+.bcard-toggle {
+  display: block;
+  float: right;
+  margin-right: -2rem;
+  width: 38px;
+  height: 38px;
+  z-index: 2;
+  background: url('../images/bcard/flip.png');
+}
+
+.bcard-nametag {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+}
+
+/* Inner container */
+.bcard-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  z-index: 1;
+}
+
+/* Both sides */
+.bcard-side {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url('../images/bcard/bg3.png');
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  padding: 2rem 4rem 0 2rem;
+}
+
+/* Back side */
+.bcard-side-back {
+  background: url('../images/bcard/bg4.jpg');
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+/* Hover state */
+.bcard:hover .bcard-inner {
+  -webkit-transform: rotateX(10deg);
+  transform: rotateX(10deg);
+  box-shadow: 0 20px 20px rgba(50, 50, 50, 0.2);
+}
+
+/* :checked state */
+.bcard-input:checked + .bcard-inner {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+/* Hover & :checked state */
+.bcard:hover .bcard-input:checked + .bcard-inner {
+  -webkit-transform: rotateX(170deg);
+  transform: rotateX(170deg);
+  box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+}
+
+.bcard-heading {
+  font-weight: 400;
+  margin: 0;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.bcard-subheading {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.bcard-bio {
+  font-size: 1.125rem;
+}
+
+.bcard-contact {
+  padding: 0;
+  margin-bottom: 4rem;
+  list-style: none;
+}
+
+.bcard-contact-item {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.bcard-social-md {
+  float: left;
+}
+
+.bcard-social-md img {
+  vertical-align: top;
+  margin-right: 0.5rem;
+}
+
+.bcard-social-md span {
+  display: inline-block;
+}
+
+.bcard-social-list {
+  float: right;
+  padding: 0;
+  margin-top: 0.25rem;
+  margin-right: -2rem;
+  list-style: none;
+}
+
+.bcard-social-item {
+  display: inline-block;
+}
+
+.bcard-social-link {
+  display: block;
+  width: 38px;
+  height: 38px;
+  margin-left: 1rem;
+}
+
+.bcard-social-facebook {
+  background-image: url('../images/bcard/facebook.png');
+}
+
+.bcard-social-github {
+  background-image: url('../images/bcard/github1.png');
+}
+
+.bcard-social-twitter {
+  background-image: url('../images/bcard/twitter.png');
+}
+
+.bcard-social-linkedin {
+  background-image: url('../images/bcard/linkedin.png');
+}
+
+/* Hide text visually have it available for screen readers */
+.bcard-social-link span {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute !important;
+}

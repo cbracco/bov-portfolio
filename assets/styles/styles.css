@@ -1010,7 +1010,10 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Contact */
-#section-contact {}
+#section-contact .section-footer {
+  text-align: center;
+  margin-top: 3rem;
+}
 
 @media (min-width: 600px) and (min-height: 400px) {
   .section {

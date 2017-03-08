@@ -5,120 +5,120 @@
 $section-divider-height: 110px;
 
 .section {
+  background-color: $color-white;
+  padding-bottom: ($base-vertical-rhythm * 3);
+  padding-top: ($base-vertical-rhythm * 3);
   position: relative;
   z-index: 1;
-  padding-top: ($base-vertical-rhythm * 3);
-  padding-bottom: ($base-vertical-rhythm * 3);
-  background-color: $color-white;
 }
 
-.section-heading {
+.section__heading {
   font-size: $base-heading-3-font-size;
   margin-top: 0;
 }
 
-.section-subheading {
+.section__subheading {
   margin-bottom: ($base-vertical-rhythm * 3);
 }
 
-.section-divider {
-  width: 100%;
-  height: $section-divider-height;
+.section__divider {
   background-color: inherit;
-  background-repeat: repeat-x;
   background-position: 0 0;
+  background-repeat: repeat-x;
+  height: $section-divider-height;
+  width: 100%;
 }
 
 /* Intro */
-#section-intro {
+#sectionIntro {
   background-color: $color-primary;
 }
 
-#section-intro,
-#section-intro .section-heading {
+#sectionIntro,
+#sectionIntro .section__heading {
   color: $color-white;
 }
 
-#section-intro hr {
-  display: block;
-  width: 64px;
-  height: 6px;
+#sectionIntro hr {
   background: $color-secondary;
   border: 0;
+  display: block;
+  height: 6px;
   margin: 0 0 0.5rem;
+  width: 64px;
 }
 
-#section-intro + .section-divider {
-  background-image: url('../images/section/section-divider-primary.svg');
+#sectionIntro + .section__divider {
+  background-image: url("../images/section/section-divider-primary.svg");
 }
 
 /* About */
-#section-about {
+#sectionAbout {
   background-color: $color-white;
   color: $base-color;
 }
 
-#section-about + .section-divider {
-  background-image: url('../images/section/section-divider-white.svg');
+#sectionAbout + .section__divider {
   background-color: $color-gray-lightest;
+  background-image: url("../images/section/section-divider-white.svg");
 }
 
 /* Projects */
-#section-projects {
+#sectionProjects {
   background-color: $color-gray-lightest;
   color: $base-color;
 }
 
-#section-projects .section-heading {
+#sectionProjects .section__heading {
   color: $color-gray-darker;
 }
 
-#section-projects + .section-divider {
-  background-image: url('../images/section/section-divider-gray-lightest.svg');
+#sectionProjects + .section__divider {
   background-color: $color-primary;
+  background-image: url("../images/section/section-divider-gray-lightest.svg");
 }
 
 /* Skills */
-#section-skills {
+#sectionSkills {
   background-color: $color-primary;
 }
 
-#section-skills,
-#section-skills .section-heading {
+#sectionSkills,
+#sectionSkills .section__heading {
   color: $color-white;
 }
 
-#section-skills + .section-divider {
-  background-image: url('../images/section/section-divider-primary.svg');
+#sectionSkills + .section__divider {
+  background-image: url("../images/section/section-divider-primary.svg");
 }
 
 /* Contact */
-#section-contact .section-footer {
-  text-align: center;
+#sectionContact .section__footer {
   margin-top: ($base-vertical-rhythm * 3);
+  text-align: center;
 }
 
 @media (min-width: 600px) and (min-height: 400px) {
   .section {
-    padding-top: ($base-vertical-rhythm * 6);
     padding-bottom: ($base-vertical-rhythm * 6);
+    padding-top: ($base-vertical-rhythm * 6);
   }
 }
 
 @media (min-width: 768px) and (min-height: 600px) {
   .section {
-    padding-top: ($base-vertical-rhythm * 9);
     padding-bottom: ($base-vertical-rhythm * 9);
+    padding-top: ($base-vertical-rhythm * 9);
   }
 
-  .section-heading {
+  .section__heading {
     font-size: $base-heading-1-font-size;
   }
 }
 
 @media (min-width: 1024px) and (min-height: 768px) {
   .section {
-    padding-top: ($base-vertical-rhythm * 12);
     padding-bottom: ($base-vertical-rhythm * 12);
+    padding-top: ($base-vertical-rhythm * 12);
   }
 }

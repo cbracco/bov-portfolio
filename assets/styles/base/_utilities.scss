@@ -2,10 +2,10 @@
 // UTILITIES
 //
 
-.visuallyhidden {
-  @include visuallyhidden();
-}
-
 .clearfix {
   @include clearfix();
+}
+
+.visuallyhidden {
+  @include visuallyhidden();
 }

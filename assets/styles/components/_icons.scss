@@ -4,10 +4,10 @@
 
 $icon-size: 16px;
 
-[class^="icon-"],
-[class*=" icon-"] {
-    height: $icon-size;
-    width: $icon-size;
-    display: inline-block;
-    fill: currentColor;
+[class^="icon__"],
+[class*=" icon__"] {
+  display: inline-block;
+  fill: currentColor;
+  height: $icon-size;
+  width: $icon-size;
 }

@@ -9,29 +9,29 @@ $graph-item-width-2: 20%;
 
 .graph {
   display: table;
-  width: 100%;
   margin-bottom: $graph-margin;
+  width: 100%;
 }
 
-.graph-item {
+.graph__item {
   display: table-cell;
   padding: $graph-item-padding;
   text-align: center;
 }
 
-.graph-item:nth-child(1) {
-  width: $graph-item-width-1;
+.graph__item:nth-child(1) {
   background-color: $color-quaternary;
   border-radius: ($base-vertical-rhythm * 0.5) 0 0 ($base-vertical-rhythm * 0.5);
+  width: $graph-item-width-1;
 }
 
-.graph-item:nth-child(2) {
-  width: $graph-item-width-2;
+.graph__item:nth-child(2) {
   background-color: $color-quinary;
+  width: $graph-item-width-2;
 }
 
-.graph-item:nth-child(3) {
-  width: $graph-item-width-2;
+.graph__item:nth-child(3) {
   background-color: $color-gray-darker;
   border-radius: 0 ($base-vertical-rhythm * 0.5) ($base-vertical-rhythm * 0.5) 0;
+  width: $graph-item-width-2;
 }

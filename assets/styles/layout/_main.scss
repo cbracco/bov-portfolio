@@ -3,32 +3,32 @@
 //
 
 .main {
-  position: relative;
   padding-top: $menubar-nav-fixed-height;
+  position: relative;
 }
 
-.menubar-input:checked ~ .main {
+.menubar__input:checked ~ .main {
   height: 100%;
   overflow: hidden;
 }
 
-.main-container {
+.main__container {
   transition: transform $transition-timing-default;
 }
 
-.menubar-input:checked ~ .main .main-container {
+.menubar__input:checked ~ .main .main__container {
   transform: translate3d($menubar-nav-width, 0, 0);
 }
 
 // BREAKPOINTS
 @media (min-width: 1024px) {
   .main {
-    padding-top: $menubar-nav-fixed-height;
     height: auto;
     overflow: visible;
+    padding-top: $menubar-nav-fixed-height;
   }
 
-  .main-container {
+  .main__container {
     height: auto;
     overflow: visible;
   }

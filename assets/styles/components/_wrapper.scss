@@ -9,29 +9,29 @@ $wrapper-xl-max-width: 1140px;
 $wrapper-xxl-max-width: 1280px;
 
 .wrapper {
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: ($base-vertical-rhythm * 1.5);
   padding-right: ($base-vertical-rhythm * 1.5);
+  width: 100%;
 }
 
-.wrapper-sm {
+.wrapper--sm {
   max-width: $wrapper-sm-max-width;
 }
 
-.wrapper-md {
+.wrapper--md {
   max-width: $wrapper-md-max-width;
 }
 
-.wrapper-lg {
+.wrapper--lg {
   max-width: $wrapper-lg-max-width;
 }
 
-.wrapper-xl {
+.wrapper--xl {
   max-width: $wrapper-xl-max-width;
 }
 
-.wrapper-xxl {
+.wrapper--xxl {
   max-width: $wrapper-xxl-max-width;
 }

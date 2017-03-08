@@ -1,8 +1,10 @@
+//
+// BUSINESS CARD
+// @link https://codepen.io/cbracco/pen/rjPMZZ
+//
+
 .bcard {
   position: relative;
-  /* position: absolute;
-  top: 50%;
-  left: 50%; */
   display: block;
   cursor: pointer;
   width: 100%;
@@ -13,12 +15,10 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   margin: 0 auto;
-  /* -webkit-transform: translate(-50%, -50%); */
-  /* transform: translate(-50%, -50%); */
 }
 
 .bcard a {
-  color: #ffe347;
+  color: #ff97e6;
   text-decoration: none;
 }
 

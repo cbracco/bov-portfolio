@@ -1,0 +1,35 @@
+//
+// MAIN
+//
+
+.main {
+  position: relative;
+  padding-top: $menubar-nav-fixed-height;
+}
+
+.menubar-input:checked ~ .main {
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-container {
+  transition: transform $transition-timing-default;
+}
+
+.menubar-input:checked ~ .main .main-container {
+  transform: translate3d($menubar-nav-width, 0, 0);
+}
+
+// BREAKPOINTS
+@media (min-width: 1024px) {
+  .main {
+    padding-top: $menubar-nav-fixed-height;
+    height: auto;
+    overflow: visible;
+  }
+
+  .main-container {
+    height: auto;
+    overflow: visible;
+  }
+}

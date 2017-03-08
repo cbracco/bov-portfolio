@@ -1,0 +1,111 @@
+//
+// TABPANEL
+//
+
+$tabpanel-label-width: 25%;
+$tabpanel-body-width: 75%;
+
+.tabpanel {
+  position: relative;
+  background-color: $color-gray-lighter;
+}
+
+/* Show outline for accessibility */
+.tabpanel-input:focus + .tabpanel-label {
+  position: relative;
+  z-index: 1;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.tabpanel-label {
+  display: block;
+  padding: ($base-vertical-rhythm * 0.75) ($base-vertical-rhythm);
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 2px solid $color-gray-light;
+}
+
+.tabpanel-label:hover {
+  background-color: $color-gray-light;
+  color: $color-gray-darkest;
+}
+
+.tabpanel-input:checked + .tabpanel-label {
+  background-color: #9292a0;
+  color: $color-white;
+  border-bottom: 0;
+}
+
+.tabpanel-body {
+  display: none;
+  background-color: $color-white;
+  padding: ($base-vertical-rhythm * 1.5);
+  border: 2px solid $color-gray-light;
+}
+
+.tabpanel-body > *:last-child {
+  margin-bottom: 0;
+}
+
+.tabpanel-input:checked + .tabpanel-label + .tabpanel-body {
+  display: block;
+}
+
+.tabpanel-body-heading {
+  font-weight: 400;
+  font-size: $base-heading-5-font-size;
+  padding-top: ($base-vertical-rhythm * 1.5);
+  margin-bottom: ($base-vertical-rhythm * 0.5);
+}
+
+.tabpanel-body-content {
+  font-size: 16px;
+}
+
+.tabpanel-body-link {
+  margin-right: ($base-vertical-rhythm * 1.5);
+}
+
+.tabpanel-body-link svg {
+  position: relative;
+  top: -2px;
+  vertical-align: middle;
+  width: ($base-vertical-rhythm * 1.5);
+  height: ($base-vertical-rhythm * 1.5);
+  margin-right: ($base-vertical-rhythm * 0.5);
+}
+
+// BREAKPOINTS
+@media (min-width: 1024px) {
+  .tabpanel {
+    display: block;
+    background-color: transparent;
+  }
+
+  .tabpanel-label {
+    text-align: right;
+    width: $tabpanel-label-width;
+    padding: ($base-vertical-rhythm * 1.5) ($base-vertical-rhythm * 1.5);
+    border-bottom: 0;
+  }
+
+  .tabpanel-input:checked + .tabpanel-label {
+    background-color: $color-white;
+    color: $color-gray-darkest;
+  }
+
+  .tabpanel-body {
+    position: absolute;
+    top: 0;
+    width: $tabpanel-body-width;
+    height: 100%;
+    overflow-y: auto;
+    margin-left: $tabpanel-label-width;
+    border: 0;
+  }
+
+  .tabpanel-body .carousel {
+    margin-top: ($base-vertical-rhythm * 1.5);
+    height: auto;
+  }
+}

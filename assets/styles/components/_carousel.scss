@@ -1,0 +1,200 @@
+//
+// CAROUSEL
+//
+
+// VARIABLES
+$carousel-height: 300px;
+$carousel-margin: ($base-vertical-rhythm * 3);
+$carousel-list-margin: 0 ($base-vertical-rhythm) ($base-vertical-rhythm * 2);
+$carousel-list-background-color: $color-white;
+$carousel-item-font-size: $base-vertical-rhythm;
+$carousel-item-line-height: $base-line-height;
+$carousel-navigation-height: 24px;
+$carousel-navigation-item-box-shadow: inset 4px -4px 0 1px $color-gray-light;
+$carousel-navigation-item-hover-box-shadow: inset 4px -4px 0 1px $color-gray-darkest;
+$carousel-navigation-prev-left: -10px;
+$carousel-navigation-prev-rotate: rotate(45deg);
+$carousel-navigation-next-right: -10px;
+$carousel-navigation-next-rotate: rotate(225deg);
+$carousel-indicators-margin: 10px;
+$carousel-indicators-item-size: ($base-vertical-rhythm / 3);
+$carousel-indicators-item-background-color: $color-gray-light;
+$carousel-indicators-item-after-background-color: $color-gray-darkest;
+
+.carousel {
+  position: relative;
+  display: block;
+  height: $carousel-height;
+  margin-bottom: $carousel-margin;
+}
+
+.carousel-input {
+  display: none;
+}
+
+.carousel-input:nth-of-type(1):checked ~ .carousel-list .carousel-item:first-of-type {
+  margin-left: 0;
+}
+.carousel-input:nth-of-type(2):checked ~ .carousel-list .carousel-item:first-of-type {
+  margin-left: -100%;
+}
+.carousel-input:nth-of-type(3):checked ~ .carousel-list .carousel-item:first-of-type {
+  margin-left: -200%;
+}
+.carousel-input:nth-of-type(4):checked ~ .carousel-list .carousel-item:first-of-type {
+  margin-left: -300%;
+}
+
+.carousel-list {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  height: 100%;
+  margin: $carousel-list-margin;
+  font-size: 0;
+  line-height: 0;
+  list-style: none;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: $carousel-list-background-color;
+}
+
+.carousel-item {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-size: $carousel-item-font-size;
+  line-height: $carousel-item-line-height;
+  white-space: normal;
+  transition: all $transition-timing-default;
+}
+
+.carousel-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: $carousel-navigation-height;
+  z-index: 1;
+  user-select: none;
+}
+
+.carousel-navigation-item {
+  display: none;
+  position: absolute;
+  top: -50%;
+  padding: ($carousel-navigation-height / 2);
+  box-shadow: $carousel-navigation-item-box-shadow;
+  cursor: pointer;
+  transition: box-shadow $transition-timing-default;
+}
+
+.carousel-navigation-item:before {
+  position: absolute;
+  content: '';
+  top: -100%;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-navigation-item:hover {
+  box-shadow: $carousel-navigation-item-hover-box-shadow;
+}
+
+/* Prev */
+.carousel-input:nth-of-type(1):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(0),
+.carousel-input:nth-of-type(2):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(1),
+.carousel-input:nth-of-type(3):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(2),
+.carousel-input:nth-of-type(4):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(3) {
+  display: block;
+  left: $carousel-navigation-prev-left;
+  transform: $carousel-navigation-prev-rotate;
+}
+
+/* Next */
+.carousel-input:nth-of-type(1):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(2),
+.carousel-input:nth-of-type(2):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(3),
+.carousel-input:nth-of-type(3):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(4) {
+  display: block;
+  right: $carousel-navigation-next-right;
+  transform: $carousel-navigation-next-rotate;
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 10;
+  margin-top: 0 $carousel-indicators-item-size;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  user-select: none;
+}
+
+.carousel-indicators-container {
+  margin-left: -100%;
+}
+
+.carousel-indicators-item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 $carousel-indicators-item-size;
+  padding: $carousel-indicators-item-size;
+  background: $carousel-indicators-item-background-color;
+}
+
+.carousel-indicators-item:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin-left: -$carousel-indicators-item-size;
+  margin-top: -$carousel-indicators-item-size;
+  background: $carousel-indicators-item-after-background-color;
+  border-radius: 50%;
+  padding: $carousel-indicators-item-size;
+  opacity: 0;
+  transition: opacity $transition-timing-default;
+}
+
+.carousel-indicators-item:hover:after,
+.carousel-input:nth-of-type(1):checked ~ .carousel-indicators .carousel-indicators-item:nth-of-type(1):after,
+.carousel-input:nth-of-type(2):checked ~ .carousel-indicators .carousel-indicators-item:nth-of-type(2):after,
+.carousel-input:nth-of-type(3):checked ~ .carousel-indicators .carousel-indicators-item:nth-of-type(3):after,
+.carousel-input:nth-of-type(4):checked ~ .carousel-indicators .carousel-indicators-item:nth-of-type(4):after {
+  opacity: 1;
+}
+
+// BREAKPOINTS
+@media (min-width: 768px) {
+  .carousel-list {
+    margin-left: ($base-vertical-rhythm * 3);
+    margin-right: ($base-vertical-rhythm * 3);
+  }
+
+  .carousel-navigation {
+    height: 32px;
+  }
+
+  .carousel-navigation-item {
+    padding: 16px;
+  }
+
+  .carousel-input:nth-of-type(1):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(0),
+  .carousel-input:nth-of-type(2):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(1),
+  .carousel-input:nth-of-type(3):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(2),
+  .carousel-input:nth-of-type(4):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(3) {
+    left: 5px;
+  }
+
+  /* Next */
+  .carousel-input:nth-of-type(1):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(2),
+  .carousel-input:nth-of-type(2):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(3),
+  .carousel-input:nth-of-type(3):checked ~ .carousel-navigation .carousel-navigation-item:nth-of-type(4) {
+    right: 5px;
+  }
+}

@@ -1,0 +1,13 @@
+//
+// ICONS
+//
+
+$icon-size: 16px;
+
+[class^="icon-"],
+[class*=" icon-"] {
+    height: $icon-size;
+    width: $icon-size;
+    display: inline-block;
+    fill: currentColor;
+}

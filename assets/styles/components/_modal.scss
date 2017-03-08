@@ -1,0 +1,61 @@
+//
+// MODAL
+//
+
+$modal-close-size: 32px;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: fade-in($color-black, 0.8);
+  color: $color-white;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity $transition-timing-default;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.modal-input:checked ~ .modal {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity $transition-timing-default;
+}
+
+.modal-close {
+  position: absolute;
+  top: ($base-vertical-rhythm * 1.5);
+  right: ($base-vertical-rhythm * 1.5);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity $transition-timing-default;
+}
+
+.modal:hover .modal-content,
+.modal:hover .modal-close {
+  opacity: 1;
+}
+
+// BREAKPOINTS
+@media (min-width: 1024px) {
+  .modal-content {
+    font-size: $base-heading-3-font-size;
+  }
+
+  .modal-close {
+    width: $modal-close-size;
+    height: $modal-close-size;
+  }
+}

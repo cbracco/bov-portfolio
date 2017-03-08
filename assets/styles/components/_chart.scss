@@ -1,0 +1,141 @@
+//
+// CHART
+//
+
+$chart-font-size: 14px;
+$chart-background-color: $color-white;
+$chart-color: $color-gray-darker;
+$chart-padding: ($base-vertical-rhythm * 6) ($base-vertical-rhythm * 3) ($base-vertical-rhythm * 9);
+$chart-margin: ($base-vertical-rhythm * 3);
+$chart-height: 550px;
+$chart-heading-top: ($base-vertical-rhythm * 3);
+$chart-heading-font-size: $base-heading-5-font-size;
+$chart-canvas-yaxis-height: 25%;
+$chart-plot-width: 20%;
+$chart-plot-label-width: 100px;
+$chart-plot-label-rotate: rotate(-60deg);
+
+.chart {
+  position: relative;
+  display: flex;
+  background-color: $chart-background-color;
+  padding: $chart-padding;
+  margin-bottom: $chart-margin;
+  width: 100%;
+  height: $chart-height;
+  color: $chart-color;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chart-heading {
+  position: absolute;
+  left: 0;
+  top: $chart-heading-top;
+  width: 100%;
+  text-align: center;
+  font-size: $chart-heading-font-size;
+  font-weight: 600;
+  text-align: center;
+}
+
+.chart-frontend .chart-heading { color: $color-quaternary; }
+.chart-backend .chart-heading  { color: $color-quinary; }
+.chart-other .chart-heading    { color: $color-gray-darkest; }
+
+.chart-yaxis {
+  height: 100%;
+}
+
+.chart-yaxis-label {
+  position: relative;
+  top: -($base-vertical-rhythm * 0.75);
+  left: -$base-vertical-rhythm;
+  height: $chart-canvas-yaxis-height;
+  font-size: $chart-font-size;
+  text-align: right;
+  color: $color-gray;
+}
+
+.chart-canvas {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  border-bottom: 1px solid $color-gray;
+}
+
+.chart-canvas-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.chart-canvas-line {
+  position: relative;
+  height: $chart-canvas-yaxis-height;
+  border-top: 1px dashed $color-gray;
+}
+
+.chart-plot {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: $chart-plot-width;
+  height: 100%;
+  margin-right: ($base-vertical-rhythm * 0.5);
+}
+
+.chart-canvas-lines + .chart-plot {
+  margin-left: ($base-vertical-rhythm * 0.5);
+}
+
+.chart-plot-inner {
+  position: relative;
+  width: 100%;
+  max-width: ($base-vertical-rhythm * 3);
+  margin: 0 auto;
+  height: 100%;
+  background-color: $color-gray-darker;
+}
+
+.chart-plot:nth-child(1) .chart-plot-inner {
+  background-color: $color-primary;
+  color: $color-primary;
+}
+
+.chart-plot:nth-child(2) .chart-plot-inner {
+  background-color: $color-secondary;
+  color: $color-secondary;
+}
+
+.chart-plot:nth-child(3) .chart-plot-inner {
+  background-color: $color-tertiary;
+  color: $color-tertiary;
+}
+
+.chart-plot:nth-child(4) .chart-plot-inner {
+  background-color: $color-quaternary;
+  color: $color-quaternary;
+}
+
+.chart-plot:nth-child(5) .chart-plot-inner {
+  background-color: $color-quinary;
+  color: $color-quinary;
+}
+
+.chart-plot-label {
+  position: absolute;
+  bottom: -($base-vertical-rhythm * 4.5);
+  left: -($base-vertical-rhythm * 3);
+  font-size: $chart-font-size;
+  text-align: right;
+  white-space: nowrap;
+  width: $chart-plot-label-width;
+  transform: $chart-plot-label-rotate;
+}

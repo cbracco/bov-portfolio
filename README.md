@@ -1,4 +1,4 @@
-# md-portfolio
+# bov-portfolio
 
 > The source code for my [Bov Academy](https://bovacademy.com/) portfolio.
 

@@ -1,6 +1,6 @@
 # md-portfolio
 
-> The source code for my [Modern Developer](https://bovacademy.com/) responsive portfolio.
+> The source code for my [Bov Academy](https://bovacademy.com/) portfolio.
 
 # Building Styles
 

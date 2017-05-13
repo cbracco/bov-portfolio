@@ -32,7 +32,7 @@
 }
 
 .bcard__toggle {
-  background: url("../images/bcard/flip.png");
+  background: url("/assets/images/bcard/flip.png");
   display: block;
   float: right;
   height: 38px;
@@ -67,7 +67,7 @@
 .bcard__side {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  background: url("../images/bcard/bg3.png");
+  background: url("/assets/images/bcard/bg3.png");
   box-sizing: border-box;
   color: #fff;
   height: 100%;
@@ -78,7 +78,7 @@
 
 /* Back side */
 .bcard__side--back {
-  background: url("../images/bcard/bg4.jpg");
+  background: url("/assets/images/bcard/bg4.jpg");
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
 }
@@ -163,19 +163,19 @@
 }
 
 .bcard__social--facebook {
-  background-image: url("../images/bcard/facebook.png");
+  background-image: url("/assets/images/bcard/facebook.png");
 }
 
 .bcard__social--github {
-  background-image: url("../images/bcard/github1.png");
+  background-image: url("/assets/images/bcard/github1.png");
 }
 
 .bcard__social--twitter {
-  background-image: url("../images/bcard/twitter.png");
+  background-image: url("/assets/images/bcard/twitter.png");
 }
 
 .bcard__social--linkedin {
-  background-image: url("../images/bcard/linkedin.png");
+  background-image: url("/assets/images/bcard/linkedin.png");
 }
 
 /* Hide text visually have it available for screen readers */

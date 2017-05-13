@@ -10,43 +10,43 @@ var smoothScroll = (function () {
 
   // DEFINE EASING CONSTANTS
   var easings = {
-    linear(t) {
+    linear: function (t) {
       return t;
     },
-    easeInQuad(t) {
+    easeInQuad: function (t) {
       return t * t;
     },
-    easeOutQuad(t) {
+    easeOutQuad: function (t) {
       return t * (2 - t);
     },
-    easeInOutQuad(t) {
+    easeInOutQuad: function (t) {
       return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
     },
-    easeInCubic(t) {
+    easeInCubic: function (t) {
       return t * t * t;
     },
-    easeOutCubic(t) {
+    easeOutCubic: function (t) {
       return (--t) * t * t + 1;
     },
-    easeInOutCubic(t) {
+    easeInOutCubic: function (t) {
       return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
     },
-    easeInQuart(t) {
+    easeInQuart: function (t) {
       return t * t * t * t;
     },
-    easeOutQuart(t) {
+    easeOutQuart: function (t) {
       return 1 - (--t) * t * t * t;
     },
-    easeInOutQuart(t) {
+    easeInOutQuart: function (t) {
       return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
     },
-    easeInQuint(t) {
+    easeInQuint: function (t) {
       return t * t * t * t * t;
     },
-    easeOutQuint(t) {
+    easeOutQuint: function (t) {
       return 1 + (--t) * t * t * t * t;
     },
-    easeInOutQuint(t) {
+    easeInOutQuint: function (t) {
       return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
     }
   };

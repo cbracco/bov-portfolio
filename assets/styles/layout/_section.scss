@@ -49,7 +49,7 @@ $section-divider-height: 110px;
 }
 
 #sectionIntro + .section__divider {
-  background-image: url("../images/section/section-divider-primary.svg");
+  background-image: url("/assets/images/section/section-divider-primary.svg");
 }
 
 /* About */
@@ -60,7 +60,7 @@ $section-divider-height: 110px;
 
 #sectionAbout + .section__divider {
   background-color: $color-gray-lightest;
-  background-image: url("../images/section/section-divider-white.svg");
+  background-image: url("/assets/images/section/section-divider-white.svg");
 }
 
 /* Projects */
@@ -75,7 +75,7 @@ $section-divider-height: 110px;
 
 #sectionProjects + .section__divider {
   background-color: $color-primary;
-  background-image: url("../images/section/section-divider-gray-lightest.svg");
+  background-image: url("/assets/images/section/section-divider-gray-lightest.svg");
 }
 
 /* Skills */
@@ -89,7 +89,7 @@ $section-divider-height: 110px;
 }
 
 #sectionSkills + .section__divider {
-  background-image: url("../images/section/section-divider-primary.svg");
+  background-image: url("/assets/images/section/section-divider-primary.svg");
 }
 
 /* Contact */

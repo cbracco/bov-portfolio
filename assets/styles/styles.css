@@ -25,7 +25,7 @@
   display: none; }
 
 .bcard__toggle {
-  background: url("../images/bcard/flip.png");
+  background: url("/assets/images/bcard/flip.png");
   display: block;
   float: right;
   height: 38px;
@@ -57,7 +57,7 @@
 .bcard__side {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background: url("../images/bcard/bg3.png");
+  background: url("/assets/images/bcard/bg3.png");
   box-sizing: border-box;
   color: #fff;
   height: 100%;
@@ -67,7 +67,7 @@
 
 /* Back side */
 .bcard__side--back {
-  background: url("../images/bcard/bg4.jpg");
+  background: url("/assets/images/bcard/bg4.jpg");
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg); }
 
@@ -137,16 +137,16 @@
   width: 38px; }
 
 .bcard__social--facebook {
-  background-image: url("../images/bcard/facebook.png"); }
+  background-image: url("/assets/images/bcard/facebook.png"); }
 
 .bcard__social--github {
-  background-image: url("../images/bcard/github1.png"); }
+  background-image: url("/assets/images/bcard/github1.png"); }
 
 .bcard__social--twitter {
-  background-image: url("../images/bcard/twitter.png"); }
+  background-image: url("/assets/images/bcard/twitter.png"); }
 
 .bcard__social--linkedin {
-  background-image: url("../images/bcard/linkedin.png"); }
+  background-image: url("/assets/images/bcard/linkedin.png"); }
 
 /* Hide text visually have it available for screen readers */
 .bcard__social__link span {
@@ -1033,7 +1033,7 @@ ul {
   width: 64px; }
 
 #sectionIntro + .section__divider {
-  background-image: url("../images/section/section-divider-primary.svg"); }
+  background-image: url("/assets/images/section/section-divider-primary.svg"); }
 
 /* About */
 #sectionAbout {
@@ -1042,7 +1042,7 @@ ul {
 
 #sectionAbout + .section__divider {
   background-color: #f0f0f2;
-  background-image: url("../images/section/section-divider-white.svg"); }
+  background-image: url("/assets/images/section/section-divider-white.svg"); }
 
 /* Projects */
 #sectionProjects {
@@ -1054,7 +1054,7 @@ ul {
 
 #sectionProjects + .section__divider {
   background-color: #9150ae;
-  background-image: url("../images/section/section-divider-gray-lightest.svg"); }
+  background-image: url("/assets/images/section/section-divider-gray-lightest.svg"); }
 
 /* Skills */
 #sectionSkills {
@@ -1065,7 +1065,7 @@ ul {
   color: #ffffff; }
 
 #sectionSkills + .section__divider {
-  background-image: url("../images/section/section-divider-primary.svg"); }
+  background-image: url("/assets/images/section/section-divider-primary.svg"); }
 
 /* Contact */
 #sectionContact .section__footer {
